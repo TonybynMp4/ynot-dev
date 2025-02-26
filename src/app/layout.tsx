@@ -17,12 +17,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="bg-background text-foreground">
+            <body className="bg-background text-foreground">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<Header />
-					<main className="min-h-[80vh] mx-auto max-w-[80%]">
 						{children}
-					</main>
 					<Footer />
 				</ThemeProvider>
 			</body>

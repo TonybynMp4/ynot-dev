@@ -23,11 +23,14 @@ const projects: Project[] = [
 	},
 ]
 
-export default function ProjectsPage() {
+export default function PortfolioPage() {
 	return (
-		<div>
-			<h1 className="text-3xl font-bold mb-6">My Projects</h1>
-			<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
+			<h1 className="text-4xl font-bold mb-6">My Web Projects</h1>
+			<p className="text-lg mb-8 max-w-2xl">
+				School projects, personal projects.. mostly school projects yeah..
+			</p>
+			<section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 				{projects.map((project, index) => (
 					<Card key={index} className="flex flex-col">
 						<CardHeader>
@@ -59,7 +62,7 @@ export default function ProjectsPage() {
 						</CardFooter>
 					</Card>
 				))}
-			</div>
-		</div>
+			</section>
+		</main >
 	)
 }

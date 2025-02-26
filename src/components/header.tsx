@@ -27,7 +27,7 @@ export function Header() {
 							pathname === "/projects" ? "text-primary" : ""
 						}`}
 					>
-						Projects
+						Portfolio
 					</Link>
 					<Separator decorative orientation="vertical" className="h-auto" />
 					<Link
