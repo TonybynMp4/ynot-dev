@@ -78,7 +78,7 @@ export default function FiveMPage() {
 								I joined the Qbox community relatively early, around two months after it forked from qbcore, and actively contributed to the framework and its resources until May 2024.
 							</p>
 							<p className="text-lg mb-8 ml-8">
-								At some point i got to "join" the team and help with the development of the framework, which was a great experience.
+								At some point i got to &quot;join&quot; the team and help with the development of the framework, which was a great experience.
 								<br />
 								Around that time, the future of FiveM became increasingly uncertain<sup><a href="#footnote-1" className="link">1</a></sup>, coupled with school, which made it difficult for me to stay motivated.
 								<br />
@@ -90,7 +90,7 @@ export default function FiveMPage() {
 							<p className="text-lg mb-8 ml-8">
 								I still deeply respect and appreciate the project and its team, and value the skills I acquired during that time, particularly in using Git and GitHub effectively.
 								<br />
-								Much love to them; they're a really great group of people! <TooltipProvider>
+								Much love to them; they&apos;re a really great group of people! <TooltipProvider>
 									<Tooltip>
 										<TooltipTrigger>
 											(well, most of them at least eheh)
