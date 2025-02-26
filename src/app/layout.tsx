@@ -17,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-            <body className="bg-background text-foreground">
+            <body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<Header />
 						{children}

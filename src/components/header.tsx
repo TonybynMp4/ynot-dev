@@ -9,7 +9,7 @@ export function Header() {
 	const pathname = usePathname()
 
 	return (
-		<header className="container mx-auto py-4">
+		<header className="container mx-auto py-4 bg-none">
 			<div className="flex justify-between items-center">
 				<nav className="flex space-x-4">
 					<Link

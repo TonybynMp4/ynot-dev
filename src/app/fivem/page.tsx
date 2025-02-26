@@ -1,5 +1,7 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
 
 type Project = {
@@ -47,30 +49,70 @@ export default function FiveMPage() {
 					A little bit of context
 				</h2>
 				<p className="text-lg mb-8 ml-8">
-					Before being starting my journey as a web developper, I played around with <a href="https://fivem.net/" target="_blank" rel="noopener noreferrer" className="link">FiveM</a>, a multiplayer modification framework for Grand Theft Auto V.
-					This allowed me to learn a lot about Lua, SQL and JavaScript. But also to work on a cool project with a great community of developers, <a href="https://qbox-project.github.io/" target="_blank" rel="noopener noreferrer">Qbox</a>.
-				</p>
-				<h3 className="text-xl font-semibold mb-4">
-					Qbox
-				</h3>
-				<p className="text-lg mb-8 ml-8">
-					I joined the Qbox project relatively early, around two months after it forked from qbcore, and actively contributed to the framework and its resources until May 2024.
+					In late 2021, Before starting my journey as a web developper, i started playing around with <TooltipProvider>
+						<Tooltip>
+							<TooltipTrigger>
+								<a href="https://fivem.net/" target="_blank" rel="noopener noreferrer" className="link">FiveM</a>
+							</TooltipTrigger>
+							<TooltipContent>
+								A multiplayer modding platform for Grand Theft Auto V
+							</TooltipContent>
+						</Tooltip>
+					</TooltipProvider> development.
 					<br />
-					Around that time, the future of FiveM became increasingly uncertain<sup><a href="#footnote-1" className="link">1</a></sup>, which made it difficult for me to stay motivated.
-					Combined with differing opinions on the project&apos;s direction, I ultimately decided to step away.
-					I continued working on small resources for a few months, but eventually stopped altogether.
+					At that point in time, I had played on a server for almost a year and got interested in the development side of things, so i started learning!
 					<br />
-					I still have a lot of respect & love for the project and the team, these guys are really cool! (most of them at least eheh)
+					This allowed me to learn a lot about programing in general as it was my first experience. But i also got to work on a cool project with a great community of developers: <a className="link" href="https://qbox-project.github.io/" target="_blank" rel="noopener noreferrer">Qbox</a>.
 				</p>
-				<Separator className="my-2 w-[50%]" />
-				<ol className="list-decimal pl-5 space-y-4">
-					<li id="footnote-1" className="text-md mb-4">
-						<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">This document</a> explains the situation, but I and many others had heard rumors for years.
-					</li>
-				</ol>
+
+				<Accordion type="single" collapsible>
+					<AccordionItem value="item-1">
+						<AccordionTrigger>
+							<h3 className="text-xl font-semibold mb-4">
+								Qbox & the fall of FiveM
+							</h3>
+						</AccordionTrigger>
+						<AccordionContent>
+							<p className="text-lg mb-8 ml-8">
+								After being in qbcore for a few months, the qbox project was created by a few members of the qbcore team.
+								I joined the Qbox community relatively early, around two months after it forked from qbcore, and actively contributed to the framework and its resources until May 2024.
+							</p>
+							<p className="text-lg mb-8 ml-8">
+								At some point i got to "join" the team and help with the development of the framework, which was a great experience.
+								<br />
+								Around that time, the future of FiveM became increasingly uncertain<sup><a href="#footnote-1" className="link">1</a></sup>, coupled with school, which made it difficult for me to stay motivated.
+								<br />
+								Combined with differing opinions on the project&apos;s direction, I ultimately decided to step away from the project.
+							</p>
+							<p className="text-lg mb-8 ml-8">
+								I continued working on small resources for a few months, but eventually stopped altogether. <span className="italic text-sm">(Video games got me hooked again, woopsies)</span>
+							</p>
+							<p className="text-lg mb-8 ml-8">
+								I still deeply respect and appreciate the project and its team, and value the skills I acquired during that time, particularly in using Git and GitHub effectively.
+								<br />
+								Much love to them; they're a really great group of people! <TooltipProvider>
+									<Tooltip>
+										<TooltipTrigger>
+											(well, most of them at least eheh)
+										</TooltipTrigger>
+										<TooltipContent>
+											Wink wink Manason
+										</TooltipContent>
+									</Tooltip>
+								</TooltipProvider>
+							</p>
+							<Separator className="my-2 w-[50%]" />
+							<ol className="list-decimal pl-5 space-y-4">
+								<li id="footnote-1" className="text-md mb-4">
+									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">This document</a> explains the situation, but I and many others had heard rumors for years.
+								</li>
+							</ol>
+						</AccordionContent>
+					</AccordionItem>
+				</Accordion>
 			</section>
 			<section>
-				<h2 className="text-2xl font-semibold mb-4">
+				<h2 className="text-2xl font-semibold my-4">
 					Projects
 				</h2>
 				<p className="text-lg mb-8 ml-8">

@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
@@ -6,21 +7,22 @@ import Link from "next/link"
 
 export default function Home() {
 	return (
-		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
+		<main className="min-h-[80vh] mx-auto max-w-[80%] flex flex-col items-center justify-center gap-16">
 			<section className="text-center">
 				<h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio!</h1>
 				<p className="text-xl mb-8 max-w-2xl">
-					I&apos;m a student full-stack developer and
+					I&apos;m a student full-stack developer and (
 					<TooltipProvider>
 						<Tooltip>
 							<TooltipTrigger>
-								<Link href="/fivem" className="underline italic text-primary/80">(used to be at least)</Link>
+								<Link href="/fivem" className="underline italic text-primary/80">used to be at least</Link>
 							</TooltipTrigger>
 							<TooltipContent>
 								I was until ~May 2024, click to learn more.
 							</TooltipContent>
 						</Tooltip>
-					</TooltipProvider> FiveM developer.
+					</TooltipProvider>
+					) FiveM developer.
 					<br />
 					I build stuff.. I guess.
 				</p>

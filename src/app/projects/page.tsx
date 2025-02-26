@@ -25,7 +25,7 @@ const projects: Project[] = [
 
 export default function PortfolioPage() {
 	return (
-		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
+		<main className="min-h-[80vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
 			<h1 className="text-4xl font-bold mb-6">My Web Projects</h1>
 			<p className="text-lg mb-8 max-w-2xl">
 				School projects, personal projects.. mostly school projects yeah..
