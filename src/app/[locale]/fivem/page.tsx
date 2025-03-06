@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
+import { getScopedI18n } from "@/locales/server"
 
 type Project = {
 	title: string,
@@ -40,63 +41,66 @@ const fivemProjects: Project[] = [
 	},
 ]
 
-export default function FiveMPage() {
+export default async function FiveMPage() {
+	const t = await getScopedI18n("fivem")
+
 	return (
 		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
-			<h1 className="text-4xl font-bold mb-6">My FiveM Work</h1>
+			<h1 className="text-4xl font-bold mb-6">{t("title")}</h1>
 			<section>
 				<h2 className="text-2xl font-semibold mb-4">
-					A little bit of context
+					{t("context.intro.title")}
 				</h2>
 				<p className="text-lg mb-8 ml-8">
-					In late 2021, Before starting my journey as a web developper, i started playing around with <TooltipProvider>
+					{t("context.intro.content.0")}<TooltipProvider>
 						<Tooltip>
 							<TooltipTrigger>
-								<a href="https://fivem.net/" target="_blank" rel="noopener noreferrer" className="link">FiveM</a>
+								<a href="https://fivem.net/" target="_blank" rel="noopener noreferrer" className="link">{t("context.intro.content.1")}</a>
 							</TooltipTrigger>
 							<TooltipContent>
-								A multiplayer modding platform for Grand Theft Auto V
+								{t("context.intro.tooltip")}
 							</TooltipContent>
 						</Tooltip>
-					</TooltipProvider> development.
+					</TooltipProvider>{t("context.intro.content.2")}
 					<br />
-					At that point in time, I had played on a server for almost a year and got interested in the development side of things, so i started learning!
+					{t("context.intro.content.3")}
 					<br />
-					This allowed me to learn a lot about programing in general as it was my first experience. But i also got to work on a cool project with a great community of developers: <a className="link" href="https://qbox-project.github.io/" target="_blank" rel="noopener noreferrer">Qbox</a>.
+					{t("context.intro.content.4")}<a className="link" href="https://qbox-project.github.io/" target="_blank" rel="noopener noreferrer">{t("context.intro.content.5")}</a>.
 				</p>
 
 				<Accordion type="single" collapsible>
 					<AccordionItem value="item-1">
 						<AccordionTrigger>
 							<h3 className="text-xl font-semibold mb-4">
-								Qbox & the fall of FiveM
+								{t("context.qbox.title")}
 							</h3>
 						</AccordionTrigger>
 						<AccordionContent>
 							<p className="text-lg mb-8 ml-8">
-								After being in qbcore for a few months, the qbox project was created by a few members of the qbcore team.
-								I joined the Qbox community relatively early, around two months after it forked from qbcore, and actively contributed to the framework and its resources until May 2024.
+								{t("context.qbox.content.0")}
+								<br />
+								{t("context.qbox.content.1")}
 							</p>
 							<p className="text-lg mb-8 ml-8">
-								At some point i got to &quot;join&quot; the team and help with the development of the framework, which was a great experience.
+								{t("context.qbox.content.2")}
 								<br />
-								Around that time, the future of FiveM became increasingly uncertain<sup><a href="#footnote-1" className="link">1</a></sup>, coupled with school, which made it difficult for me to stay motivated.
+								{t("context.qbox.content.3")}<sup><a href="#footnote-1" className="link">1</a></sup>{t("context.qbox.content.4")}
 								<br />
-								Combined with differing opinions on the project&apos;s direction, I ultimately decided to step away from the project.
+								{t("context.qbox.content.5")}
 							</p>
 							<p className="text-lg mb-8 ml-8">
-								I continued working on small resources for a few months, but eventually stopped altogether. <span className="italic text-sm">(Video games got me hooked again, woopsies)</span>
+								{t("context.qbox.content.6")}<span className="italic text-sm">{t("context.qbox.content.7")}</span>
 							</p>
 							<p className="text-lg mb-8 ml-8">
-								I still deeply respect and appreciate the project and its team, and value the skills I acquired during that time, particularly in using Git and GitHub effectively.
+								{t("context.qbox.content.8")}
 								<br />
-								Much love to them; they&apos;re a really great group of people! <TooltipProvider>
+								{t("context.qbox.content.9")}<TooltipProvider>
 									<Tooltip>
 										<TooltipTrigger>
-											(well, most of them at least eheh)
+											{t("context.qbox.content.10")}
 										</TooltipTrigger>
 										<TooltipContent>
-											Wink wink Manason
+											{t("context.qbox.content.11")}
 										</TooltipContent>
 									</Tooltip>
 								</TooltipProvider>
@@ -104,7 +108,7 @@ export default function FiveMPage() {
 							<Separator className="my-2 w-[50%]" />
 							<ol className="list-decimal pl-5 space-y-4">
 								<li id="footnote-1" className="text-md mb-4">
-									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">This document</a> explains the situation, but I and many others had heard rumors for years.
+									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">{t('context.footnotes.0.0')}</a>{}{t('context.footnotes.0.1')}
 								</li>
 							</ol>
 						</AccordionContent>
@@ -113,10 +117,10 @@ export default function FiveMPage() {
 			</section>
 			<section>
 				<h2 className="text-2xl font-semibold my-4">
-					Projects
+					{t("projects.title")}
 				</h2>
 				<p className="text-lg mb-8 ml-8">
-					Here are some of the projects I worked on during my time on FiveM!
+					{t("projects.description")}
 				</p>
 
 				{fivemProjects.map((project, index) => (
@@ -144,7 +148,7 @@ export default function FiveMPage() {
 							</ul>
 							<Button asChild variant="default" className="ml-8 mt-6">
 								<a href={project.link} target="_blank" rel="noopener noreferrer">
-									View Project
+									{t("projects.cta")}
 								</a>
 							</Button>
 						</div>
