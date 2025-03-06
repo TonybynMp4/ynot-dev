@@ -5,8 +5,8 @@ import HeaderLink from "./headerLink";
 
 export async function Header() {
 	return (
-		<header className="container mx-auto py-4 bg-none flex justify-between items-center">
-			<nav className="flex space-x-4 items-center">
+		<header className="container py-4 bg-none flex justify-between space-x-4 items-center px-2 mx-auto text-xs sm:text-base">
+			<nav className="flex space-x-2 sm:space-x-4 items-center">
 				<HeaderLink localeKey="home" path="/" />
 				<Separator decorative orientation="vertical" className="h-3" />
 				<HeaderLink localeKey="projects" path="/projects" />
