@@ -9,7 +9,6 @@ import { Header } from "@/components/header";
 export const metadata: Metadata = {
 	title: "Ynot",
 	description: "A personal portfolio website",
-	icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({

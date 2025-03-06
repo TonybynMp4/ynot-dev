@@ -18,7 +18,7 @@ export default function Home() {
 								<Link href="/fivem" className="underline italic text-primary/80">used to be at least</Link>
 							</TooltipTrigger>
 							<TooltipContent>
-								I was until ~May 2024, click to learn more.
+								I was until ~May 2024, Click to learn more!
 							</TooltipContent>
 						</Tooltip>
 					</TooltipProvider>
