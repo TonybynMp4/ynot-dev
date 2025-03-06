@@ -18,25 +18,29 @@ const fivemProjects: Project[] = [
 		title: "Qbox Project",
 		description: "An Open Source Community project for FiveM, a framework providing a solid foundation for roleplay servers. Building on qbcore's legacy, it aims to elevate code practices, performance, and feature quality.",
 		features: ["High performance", "Feature-rich", "Easy to use", "Highly customizable", "Open-source", "Community-driven", "Improved code quality"],
+		image: "https://42a7luf39b.ufs.sh/f/7FQN8DivdGH6ZFhWfduBgOSzK2rmMtDb1JI9wfHNC4qP75hY",
 		link: "https://github.com/qbox-Project",
 	},
 	{
 		title: "y_hud",
 		description: "A basic, but feature-rich HUD for the qbox framework.",
 		features: ["Player HUD", "Statuses, Voicechat integration, Compass", "Vehicle HUD", "Speedometer, Lights, Fuel gauge, Seatbelt & Nitro support"],
+		image: "https://42a7luf39b.ufs.sh/f/7FQN8DivdGH6PwHrYTnIISGBQajtRECucZlTKOWFxrV1YyNi",
 		link: "https://github.com/Ynot-Workshop/y_hud/",
 	},
 	{
 		title: "y_customs",
 		description: "A vehicle customization script allowing players to customize their vehicles with a variety of options.",
 		features: ["\"Exclusive\" chameleon colors", "Performance parts", "Cosmetic parts", "Liveries, etc..."],
+		image: "https://42a7luf39b.ufs.sh/f/7FQN8DivdGH6jiuEiHUPaDIxOXbSstCdEVHB2RMleUNYovGZ",
 		link: "https://github.com/Ynot-Workshop/y_customs"
 	},
 
 	{
 		title: "y_dispatch",
-		description: "A simple dispatch system for emergency services. A complete remake in React with tons of features was planned but i never got around to finishing it.",
+		description: "A simple dispatch system for emergency services. A complete remake in React with tons of features was planned but i never got around to finishing it. \n(image is not great but that's all i got)",
 		features: ["Calls", "Exports", "Dispatching system"],
+		image: "https://42a7luf39b.ufs.sh/f/7FQN8DivdGH6HFPkOlVO7H9QYEDP01WIMZ2XuyGtbcejzTFB",
 		link: "https://github.com/TonybynMp4/y_dispatch"
 	},
 ]
@@ -77,9 +81,27 @@ export default async function FiveMPage() {
 						</AccordionTrigger>
 						<AccordionContent>
 							<p className="text-lg mb-8 ml-8">
-								{t("context.qbox.content.0")}
+								{t("context.qbox.content.0.0")}<TooltipProvider>
+									<Tooltip>
+										<TooltipTrigger className="underline decoration-dotted">
+											{t("context.qbox.content.0.1")}<sup><a href="#footnote-2" className="link">2</a></sup>
+										</TooltipTrigger>
+										<TooltipContent>
+											{t("context.qbox.content.0.2")}
+										</TooltipContent>
+									</Tooltip>
+								</TooltipProvider>{t("context.qbox.content.0.3")}
 								<br />
-								{t("context.qbox.content.1")}
+								{t("context.qbox.content.1.0")}<TooltipProvider>
+									<Tooltip>
+										<TooltipTrigger className="underline decoration-dotted">
+											{t("context.qbox.content.1.1")}<sup><a href="#footnote-3" className="link">3</a></sup>
+										</TooltipTrigger>
+										<TooltipContent>
+											{t("context.qbox.content.1.2")}
+										</TooltipContent>
+									</Tooltip>
+								</TooltipProvider>{t("context.qbox.content.1.3")}
 							</p>
 							<p className="text-lg mb-8 ml-8">
 								{t("context.qbox.content.2")}
@@ -108,7 +130,13 @@ export default async function FiveMPage() {
 							<Separator className="my-2 w-[50%]" />
 							<ol className="list-decimal pl-5 space-y-4">
 								<li id="footnote-1" className="text-md mb-4">
-									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">{t('context.footnotes.0.0')}</a>{}{t('context.footnotes.0.1')}
+									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">{t('context.footnotes.0.0')}</a>{t('context.footnotes.0.1')}
+								</li>
+								<li id="footnote-2" className="text-md mb-4">
+									{t("context.qbox.content.0.2")}
+								</li>
+								<li id="footnote-3" className="text-md mb-4">
+									{t("context.qbox.content.1.2")}
 								</li>
 							</ol>
 						</AccordionContent>

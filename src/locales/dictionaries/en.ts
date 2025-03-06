@@ -85,9 +85,19 @@ export default {
 			qbox: {
 				title: "Qbox & the fall of FiveM",
 				content: [
-					"After being in qbcore for a few months, the qbox project was created by a few members of the qbcore team.",
-					"I joined the Qbox community relatively early, around two months after it forked from qbcore, and actively contributed to the framework and its resources until May 2024.",
-					"At some point i got to \"join\" the team and help with the development of the framework, which was a great experience.",
+					[
+						"After being in the ",
+						"qbcore",
+							"Predecessor of Qbox, TLDR: the \"manager\" is a bad person and the developers ended up leaving the project.",
+						" community for a few months, the qbox project was created by a few members of the qbcore team.",
+					],
+					[
+						"I joined the Qbox community relatively early, around two months after it ",
+						"forked",
+							"Fork: copy of a project to modify it without affecting the original (and more or less \"own\" the new one)",
+						" from qbcore, and actively contributed to the framework and its scripts until May 2024.",
+					],
+					"At some point i got to \"join\" the team and help with the development of the framework in a more direct manner, which was a great experience.",
 					"Around that time, the future of FiveM became increasingly uncertain",
 					", coupled with school, which made it difficult for me to stay motivated.",
 					"Combined with differing opinions on the project's direction, I ultimately decided to step away from the project.",
@@ -109,7 +119,7 @@ export default {
 		projects: {
 			title: "Projects",
 			description: "Here are some of the projects I worked on during my time on FiveM!",
-			cta: "View Projects"
+			cta: "Learn More",
 		}
 	},
 } as const
