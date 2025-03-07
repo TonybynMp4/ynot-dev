@@ -1,6 +1,5 @@
-// middleware.ts
 import { createI18nMiddleware } from 'next-international/middleware'
-import { NextRequest } from 'next/server'
+import { type NextRequest } from 'next/server'
 
 const I18nMiddleware = createI18nMiddleware({
   locales: ['en', 'fr'],
@@ -9,7 +8,9 @@ const I18nMiddleware = createI18nMiddleware({
 })
 
 export function middleware(request: NextRequest) {
-  return I18nMiddleware(request)
+  const response = I18nMiddleware(request)
+
+  return response
 }
 
 export const config = {

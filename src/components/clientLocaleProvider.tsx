@@ -1,7 +1,7 @@
 "use client"
 
 import { I18nProviderClient } from '@/locales/client'
-import { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 
 export default function ClientLocaleProvider(
 {

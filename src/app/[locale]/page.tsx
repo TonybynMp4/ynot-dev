@@ -33,7 +33,7 @@ export default function Home() {
 					</TooltipProvider>
 					) {t("subtitle.text.2")}
 					<br />
-					"{t("subtitle.text.3")}"
+					&ldquo;{t("subtitle.text.3")}&rdquo;
 				</p>
 				<Button asChild>
 					<Link href="/projects">{t("cta")}</Link>
