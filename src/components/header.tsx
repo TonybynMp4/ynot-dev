@@ -1,45 +1,22 @@
-"use client"
-
-import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { ThemeSelector } from "./themeSelector"
 import { Separator } from "./ui/separator"
+import { LocaleSelector } from "./localeSelector"
+import HeaderLink from "./headerLink";
 
-export function Header() {
-	const pathname = usePathname()
-
+export async function Header() {
 	return (
-		<header className="container mx-auto py-4 bg-none">
-			<div className="flex justify-between items-center">
-				<nav className="flex space-x-4">
-					<Link
-						href="/"
-						className={`text-foreground hover:text-primary/50 ${
-							pathname === "/" ? "text-primary" : ""
-						}`}
-					>
-						Home
-					</Link>
-					<Separator decorative orientation="vertical" className="h-auto" />
-					<Link
-						href="/projects"
-						className={`text-foreground hover:text-primary/50 ${
-							pathname === "/projects" ? "text-primary" : ""
-						}`}
-					>
-						Portfolio
-					</Link>
-					<Separator decorative orientation="vertical" className="h-auto" />
-					<Link
-						href="/fivem"
-						className={`text-foreground hover:text-primary/50 ${
-							pathname === "/fivem" ? "text-primary" : ""
-						}`}
-					>
-						FiveM
-					</Link>
-				</nav>
+		<header className="container py-4 bg-none flex justify-between space-x-4 items-center px-2 mx-auto text-xs sm:text-base">
+			<nav className="flex space-x-2 sm:space-x-4 items-center">
+				<HeaderLink localeKey="home" path="/" />
+				<Separator decorative orientation="vertical" className="h-3" />
+				<HeaderLink localeKey="projects" path="/projects" />
+				<Separator decorative orientation="vertical" className="h-3" />
+				<HeaderLink localeKey="fivem" path="/fivem" />
+			</nav>
+			<div className="flex space-x-2 items-center">
 				<ThemeSelector />
+				<Separator decorative orientation="vertical" className="h-5" />
+				<LocaleSelector />
 			</div>
 		</header>
 	)
