@@ -1,7 +1,7 @@
 "use client"
 
 import { I18nProviderClient } from '@/locales/client'
-import { type ReactElement } from 'react'
+import { type ReactNode } from 'react'
 
 export default function ClientLocaleProvider(
 {
@@ -9,7 +9,7 @@ export default function ClientLocaleProvider(
 	children
 } : {
 	locale: string;
-	children: ReactElement;
+	children: ReactNode;
 }) {
 	return (
 		<I18nProviderClient locale={locale}>
