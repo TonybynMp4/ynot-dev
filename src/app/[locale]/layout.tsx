@@ -26,10 +26,10 @@ export default async function RootLayout({
 			<body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<ClientLocaleProvider locale={locale}>
-						<Header />
-						{children}
-						<Footer />
-					</ClientLocaleProvider>
+						{/* <Header />
+						 */}{children}
+{/* 						<Footer />
+ */}					</ClientLocaleProvider>
 				</ThemeProvider>
 			</body>
 		</html>
