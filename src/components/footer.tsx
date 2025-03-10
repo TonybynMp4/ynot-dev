@@ -10,8 +10,8 @@ export async function Footer() {
 			<div className="container mx-auto py-8">
 				<div className="flex flex-col md:flex-row justify-between items-center">
 					<div className="mb-4 md:mb-0">
-						<p>&copy; {new Date().getFullYear()} Ynot. {t("copyright")}</p>
-					</div>
+{/* 						<p>&copy; {new Date().getFullYear()} Ynot. {t("copyright")}</p>
+ */}					</div>
 					<div className="flex space-x-4">
 						<Link href="https://github.com/TonybynMp4" target="_blank" rel="noopener noreferrer">
 							<GithubIcon className="w-6 h-6" />
