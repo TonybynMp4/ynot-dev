@@ -24,13 +24,13 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body>
-				{/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<ClientLocaleProvider locale={locale}>
 						<Header />
 						{children}
 						<Footer />
 					</ClientLocaleProvider>
-				</ThemeProvider> */}
+				</ThemeProvider>
 			</body>
 		</html>
 	);
