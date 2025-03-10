@@ -22,7 +22,8 @@ export default async function RootLayout({
 	const { locale } = params
 
 	return (
-
+		<html lang="en">
+			<body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<ClientLocaleProvider locale={locale}>
 						<Header />
@@ -30,6 +31,7 @@ export default async function RootLayout({
 						<Footer />
 					</ClientLocaleProvider>
 				</ThemeProvider>
-
+			</body>
+		</html>
 	);
 }
