@@ -1,10 +1,10 @@
-/* import { getScopedI18n } from "@/locales/server"
- */import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
+import { getScopedI18n } from "@/locales/server"
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
 import Link from "next/link"
 
 export async function Footer() {
-/* 	const t = await getScopedI18n("footer")
- */
+	const t = await getScopedI18n("footer")
+
 	return (
 		<footer className="bg-background border-t mt-8">
 			<div className="container mx-auto py-8">
