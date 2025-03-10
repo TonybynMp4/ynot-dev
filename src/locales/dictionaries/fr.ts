@@ -54,7 +54,8 @@ export default {
 				teamSizes: {
 					solo: "Solo",
 					group: "Groupe"
-				}
+				},
+				readMore: "En savoir plus"
 			},
 		projects: [
 			{
@@ -64,6 +65,48 @@ export default {
 				duration: "Une nuit et demi",
 				role: "Développeur full-stack, Designer, Chef de projet..",
 			},
+			{
+				title: "Instaflop",
+				description: "Réseau social / clone d'Instagram",
+				date: "Fevrier 2025",
+				duration: "(étalé sur) 2 mois",
+				role: "Chef de projet, Développeur full-stack",
+			},
+			{
+				title: "VaultPay",
+				description: "Banque en ligne fictive",
+				date: "Janvier 2025",
+				duration: "1 semaine",
+				role: "Chef de projet, Développeur full-stack, Designer",
+			},
+			{
+				title: "EfreiNews",
+				description: "Blog d'actualités de l'école",
+				date: "Decembre 2024",
+				duration: "15 heures",
+				role: "Développeur full-stack",
+			},
+			{
+				title: "Java RPG Game",
+				description: "Jeu de rôle textuel en Java",
+				date: "Mai 2024",
+				duration: "10 heures",
+				role: "Développeur",
+			},
+			{
+				title: "PixelParts",
+				description: "Site e-commerce de composants informatiques",
+				date: "Octobre 2024",
+				duration: "40 heures",
+				role: "Développeur full-stack",
+			},
+			{
+				title: "Les Dunes",
+				description: "Site vitrine pour un restaurant",
+				date: "Mars 2024",
+				duration: "5 heures",
+				role: "Développeur front-end"
+			}
 		]
 	},
 	fivem: {
@@ -100,10 +143,10 @@ export default {
 					"Autour de cette période, l'avenir de FiveM devenait de plus en plus incertain",
 					", ce qui, combiné à mon entrée à l'EFREI, a rendu difficile pour moi de rester motivé au sein du projet.",
 					"Tout cela combiné à des opinions divergentes sur la direction du projet, j'ai finalement décidé de me retirer du projet.",
-					"J'ai continué à travailler sur de petits scripts pendant quelques mois, mais j'ai fini par arrêter complètement.",
+					"J'ai continué à travailler sur de petits scripts pendant quelques mois, mais j'ai fini par arrêter complètement. ",
 					"(J'ai replongé dans les jeux vidéo, oups..)",
 					"J'ai toujours énormément de respect et d'appréciation pour le projet et son équipe, et je valorise beaucoup les compétences que j'ai acquises pendant ce temps, notamment dans l'utilisation de Git et GitHub de manière plus ou moins professionnelle.",
-					"Coeur sur eux, ces personnes sont vraiment géniales!",
+					"Coeur sur eux, ces personnes sont vraiment géniales! ",
 					"Enfin, la plupart d'entre eux en tout cas eheh",
 					"Wink wink Manason"
 				]

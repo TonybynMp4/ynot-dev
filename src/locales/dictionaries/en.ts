@@ -54,7 +54,8 @@ export default {
 			teamSizes: {
 				solo: "Solo",
 				group: "Group"
-			}
+			},
+			readMore: "Read More"
 		},
 		projects: [
 			{
@@ -63,6 +64,48 @@ export default {
 				date: "February 2025",
 				duration: "1.5 whole night (for now lol)",
 				role: "Full-stack Engineer, Designer, Team Leader",
+			},
+			{
+				title: "Instaflop",
+				description: "Social Media / Instagram clone",
+				date: "February 2025",
+				duration: "(spread over) 2 months",
+				role: "Team Leader, Full-stack Developer",
+			},
+			{
+				title: "VaultPay",
+				description: "Online Banking Website",
+				date: "January 2025",
+				duration: "1 week",
+				role: "Team Leader, Full-stack Developer, Designer",
+			},
+			{
+				title: "EfreiNews",
+				description: "School News Blog",
+				date: "October 2024",
+				duration: "15 hours",
+				role: "Full-stack Developer",
+			},
+			{
+				title: "Java RPG Game",
+				description: "Text-based RPG Game",
+				date: "September 2024",
+				duration: "10 hours",
+				role: "Developer",
+			},
+			{
+				title: "PixelParts",
+				description: "PC Parts E-commerce Website",
+				date: "October 2024",
+				duration: "40 hours",
+				role: "Full-stack Developer",
+			},
+			{
+				title: "Les Dunes",
+				description: "Restaurant Website",
+				date: "March 2024",
+				duration: "5 hours",
+				role: "Front-end Developer",
 			},
 		]
 	},

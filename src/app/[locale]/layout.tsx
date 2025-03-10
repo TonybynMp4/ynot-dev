@@ -26,13 +26,9 @@ export default async function RootLayout({
             <body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<ClientLocaleProvider locale={locale}>
-						<>
 						<Header />
-						{
-							children
-						}
+						{children}
 						<Footer />
-						</>
 					</ClientLocaleProvider>
 				</ThemeProvider>
 			</body>
