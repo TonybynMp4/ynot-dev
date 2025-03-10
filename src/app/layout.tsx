@@ -1,12 +1,12 @@
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
 import { ThemeProvider } from "@/components/themeProvider"
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import ClientLocaleProvider from "@/components/clientLocaleProvider";
-
 export const metadata: Metadata = {
 	title: "Ynot",
 	description: "A personal portfolio website",
@@ -14,22 +14,21 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
 	children,
-	params
 }: Readonly<{
 	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
 }>) {
-	const { locale } = await params
+	const locale = await getLocale();
+	const messages = await getMessages();
 
 	return (
-		<html lang={locale} suppressHydrationWarning>
-            <body>
+		<html lang={locale}>
+			<body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<ClientLocaleProvider locale={locale}>
+					<NextIntlClientProvider messages={messages}>
 						<Header />
 						{children}
 						<Footer />
-					</ClientLocaleProvider>
+					</NextIntlClientProvider>
 				</ThemeProvider>
 			</body>
 		</html>

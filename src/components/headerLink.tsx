@@ -1,6 +1,6 @@
 "use client"
 
-import { useScopedI18n } from "@/locales/client";
+import { useTranslations } from "next-intl";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 
@@ -12,7 +12,7 @@ export default function HeaderLink({
 	path: string;
 }) {
 	const pathname = usePathname();
-	const t = useScopedI18n("header.nav");
+	const t = useTranslations("header.nav");
 
 	const isActive = pathname === path;
 
