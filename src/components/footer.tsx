@@ -1,5 +1,5 @@
-import { getScopedI18n } from "@/locales/server"
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
+/* import { getScopedI18n } from "@/locales/server"
+ */import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
 import Link from "next/link"
 
 export async function Footer() {
