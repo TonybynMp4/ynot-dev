@@ -22,17 +22,13 @@ export default async function RootLayout({
 	const { locale } = await params
 
 	return (
-		<html lang={locale} suppressHydrationWarning>
-            <body>
+		<html lang={locale}>
+			<body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<ClientLocaleProvider locale={locale}>
-						<>
 						<Header />
-						{
-							children
-						}
+						{children}
 						<Footer />
-						</>
 					</ClientLocaleProvider>
 				</ThemeProvider>
 			</body>
