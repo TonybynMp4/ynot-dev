@@ -28,8 +28,8 @@ export default async function RootLayout({
 					<ClientLocaleProvider locale={locale}>
 						{/* <Header />
 						 */}{children}
-{/* 						<Footer />
- */}					</ClientLocaleProvider>
+						<Footer />
+					</ClientLocaleProvider>
 				</ThemeProvider>
 			</body>
 		</html>
