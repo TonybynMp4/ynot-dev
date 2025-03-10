@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { useScopedI18n } from "@/locales/client"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 
 const cards = [
@@ -12,7 +12,7 @@ const cards = [
 ] as const
 
 export default function Home() {
-	const t = useScopedI18n("home")
+	const t = useTranslations("home")
 
 	return (
 		<main className="min-h-[80vh] mx-auto max-w-[80%] flex flex-col items-center justify-center gap-16">

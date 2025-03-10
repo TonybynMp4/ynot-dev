@@ -3,11 +3,11 @@ import { GlobeIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useChangeLocale, useScopedI18n } from "@/locales/client"
+import { useTranslations } from "next-intl"
+import { setUserLocale } from "@/i18n/localeService"
 
 export function LocaleSelector() {
-	const changeLocale = useChangeLocale()
-	const t = useScopedI18n("header.locale")
+	const t = useTranslations("header.locale")
 
 	return (
 		<DropdownMenu>
@@ -18,9 +18,9 @@ export function LocaleSelector() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
-				<DropdownMenuItem onClick={() => changeLocale('en')}>English</DropdownMenuItem>
+				<DropdownMenuItem onClick={() => setUserLocale('en')}>English</DropdownMenuItem>
 				<DropdownMenuSeparator />
-				<DropdownMenuItem onClick={() => changeLocale('fr')}>Français</DropdownMenuItem>
+				<DropdownMenuItem onClick={() => setUserLocale('fr')}>Français</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
 	)

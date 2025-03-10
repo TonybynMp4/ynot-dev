@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
-import { getScopedI18n } from "@/locales/server"
+import { getTranslations } from "next-intl/server"
 
 type Project = {
 	title: string,
@@ -46,7 +46,7 @@ const fivemProjects: Project[] = [
 ]
 
 export default async function FiveMPage() {
-	const t = await getScopedI18n("fivem")
+	const t = await getTranslations("fivem")
 
 	return (
 		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">

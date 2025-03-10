@@ -1,9 +1,9 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { getScopedI18n } from "@/locales/server"
-import { CalendarIcon, ClockIcon, GithubIcon, User2Icon, UserCircle, UserCircle2, UserCircleIcon, UsersIcon } from "lucide-react"
+import { CalendarIcon, ClockIcon, GithubIcon, UserCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { getTranslations } from "next-intl/server"
 
 type Project = {
 	title: string,
@@ -18,7 +18,7 @@ type Project = {
 }
 
 export default async function PortfolioPage() {
-	const t = await getScopedI18n("portfolio")
+	const t = await getTranslations("portfolio")
 
 	const projects: Project[] = [
 		{

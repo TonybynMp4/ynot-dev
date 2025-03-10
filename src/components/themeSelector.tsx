@@ -4,8 +4,8 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useScopedI18n } from "@/locales/client"
 import {Fragment} from "react"
+import { useTranslations } from "next-intl"
 
 const options = [
 	"light",
@@ -15,7 +15,7 @@ const options = [
 
 export function ThemeSelector() {
 	const { setTheme } = useTheme()
-	const t = useScopedI18n("header.theme")
+	const t = useTranslations("header.theme")
 
 	return (
 		<DropdownMenu>
