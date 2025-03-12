@@ -27,7 +27,7 @@ export default async function PortfolioPage() {
 			date: t('projects.1.date'),
 			duration: t('projects.1.duration'),
 			role: t('projects.1.role'),
-			tech: ["Express.js", "Vue", "Tailwind CSS", "TypeScript", "Netlify", "MySQL"],
+			tech: ["Express.js", "Vue", "TypeScript", "Netlify", "MySQL"],
 			teamSize: 4,
 			github: "https://github.com/TonybynMp4/InstaFlop"
 		},
