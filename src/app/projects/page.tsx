@@ -94,18 +94,18 @@ export default async function PortfolioPage() {
 	]
 
 	return (
-		<main className="min-h-[80vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
+		<main className="min-h-[80vh] mx-auto max-w-[80%] flex flex-col items-center justify-center py-8">
 			<h1 className="text-4xl font-bold mb-6">{t("title")}</h1>
-			<p className="text-lg mb-8 max-w-2xl">
+			<p className="text-sm sm:text-lg mb-8 max-w-2xl">
 				{t("description")}
 			</p>
 			<section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 				{projects.map((project, index) => (
-					<Card key={index} className="flex flex-col">
+					<Card key={index} className="flex flex-col justify-between">
 						<CardHeader className="pb-2">
-							<CardTitle className="flex items-center justify-between">
+							<CardTitle className="flex items-center justify-between text-lg">
 								{project.title}
-								<Badge className={project.teamSize === 1 ? "bg-primary text-secondary" : "bg-secondary text-primary"}>
+								<Badge variant={project.teamSize === 1 ? "default" : "secondary"}>
 									{project.teamSize === 1 ? t("projectInfo.teamSizes.solo") : t("projectInfo.teamSizes.group")}
 								</Badge>
 							</CardTitle>
@@ -115,23 +115,23 @@ export default async function PortfolioPage() {
 							</CardDescription>
 						</CardHeader>
 						<CardContent className="flex flex-col gap-2">
-							<p className="text-muted-foreground">{project.description}</p>
-							<div className="flex items-center gap-2">
+							<p className="text-muted-foreground text-sm">{project.description}</p>
+							<div className="flex items-center gap-2 text-sm">
 								<span><ClockIcon /></span>{project.duration}
 							</div>
-							<div className="flex items-center gap-2">
+							<div className="flex items-center gap-2 text-sm">
 								<span><UserCircle /></span>{project.role}
 							</div>
 							<div className="flex flex-wrap gap-2">
 								{project.tech.map((tech, techIndex) => (
-									<Badge key={techIndex} variant="secondary" className="rounded-full">
+									<Badge key={techIndex} variant="secondary" className="rounded-full text-xs">
 										{tech}
 									</Badge>
 								))}
 							</div>
 						</CardContent>
 						<CardFooter className="flex justify-between">
-							<Button variant="outline" size="sm" asChild>
+							<Button variant="outline" size="sm" asChild className="hover:text-primary hover:border-primary">
 								<Link href={project.github} target="_blank" rel="noopener noreferrer">
 									<GithubIcon className="h-4 w-4 mr-2" />
 									GitHub

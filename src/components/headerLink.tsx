@@ -5,9 +5,11 @@ import Link from "next/link"
 import { usePathname } from "next/navigation";
 
 export default function HeaderLink({
+	children,
 	localeKey,
 	path
 }: {
+	children?: React.ReactNode;
 	localeKey: "home" | "projects" | "fivem";
 	path: string;
 }) {
@@ -17,11 +19,19 @@ export default function HeaderLink({
 	const isActive = pathname === path;
 
 	return (
-		<Link
-			href={path}
-			className={`text-foreground hover:text-primary/50 ${isActive ? "text-primary" : ""}`}
-		>
-			{t(localeKey)}
-		</Link>
+		<div>
+			<Link
+				href={path}
+				className={`text-foreground hover:text-primary/50 hidden sm:block ${isActive ? "text-primary" : ""}`}
+				>
+					{t(localeKey)}
+			</Link>
+			<Link
+				href={path}
+				className={`text-foreground hover:text-primary/50 block sm:hidden ${isActive ? "text-primary" : ""}`}
+			>
+				{children}
+			</Link>
+		</div>
 	)
 }

@@ -49,13 +49,13 @@ export default async function FiveMPage() {
 	const t = await getTranslations("fivem")
 
 	return (
-		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center">
+		<main className="min-h-[75vh] mx-auto max-w-[80%] flex flex-col items-center justify-center py-8">
 			<h1 className="text-4xl font-bold mb-6">{t("title")}</h1>
 			<section>
 				<h2 className="text-2xl font-semibold mb-4">
 					{t("context.intro.title")}
 				</h2>
-				<p className="text-lg mb-8 ml-8">
+				<p className="text-sm sm:text-lg mb-8 sm:ml-8">
 					{t("context.intro.content.0")}<TooltipProvider>
 						<Tooltip>
 							<TooltipTrigger>
@@ -75,16 +75,16 @@ export default async function FiveMPage() {
 				<Accordion type="single" collapsible>
 					<AccordionItem value="item-1">
 						<AccordionTrigger>
-							<h3 className="text-xl font-semibold mb-4">
+							<h3 className="text-lg sm:text-xl font-semibold">
 								{t("context.qbox.title")}
 							</h3>
 						</AccordionTrigger>
 						<AccordionContent>
-							<p className="text-lg mb-8 ml-8">
+							<p className="text-sm sm:text-lg mb-8 sm:ml-8">
 								{t("context.qbox.content.0.0")}<TooltipProvider>
 									<Tooltip>
 										<TooltipTrigger className="underline decoration-dotted">
-											{t("context.qbox.content.0.1")}<sup><a href="#footnote-2" className="link">2</a></sup>
+											{t("context.qbox.content.0.1")}<sup><a href="#footnote-1" className="link">1</a></sup>
 										</TooltipTrigger>
 										<TooltipContent>
 											{t("context.qbox.content.0.2")}
@@ -95,7 +95,7 @@ export default async function FiveMPage() {
 								{t("context.qbox.content.1.0")}<TooltipProvider>
 									<Tooltip>
 										<TooltipTrigger className="underline decoration-dotted">
-											{t("context.qbox.content.1.1")}<sup><a href="#footnote-3" className="link">3</a></sup>
+											{t("context.qbox.content.1.1")}<sup><a href="#footnote-2" className="link">2</a></sup>
 										</TooltipTrigger>
 										<TooltipContent>
 											{t("context.qbox.content.1.2")}
@@ -103,17 +103,17 @@ export default async function FiveMPage() {
 									</Tooltip>
 								</TooltipProvider>{t("context.qbox.content.1.3")}
 							</p>
-							<p className="text-lg mb-8 ml-8">
+							<p className="text-sm sm:text-lg mb-8 sm:ml-8">
 								{t("context.qbox.content.2")}
 								<br />
-								{t("context.qbox.content.3")}<sup><a href="#footnote-1" className="link">1</a></sup>{t("context.qbox.content.4")}
+								{t("context.qbox.content.3")}<sup><a href="#footnote-3" className="link">3</a></sup>{t("context.qbox.content.4")}
 								<br />
 								{t("context.qbox.content.5")}
 							</p>
-							<p className="text-lg mb-8 ml-8">
+							<p className="text-sm sm:text-lg mb-8 sm:ml-8">
 								{t("context.qbox.content.6")}<span className="italic text-sm">{t("context.qbox.content.7")}</span>
 							</p>
-							<p className="text-lg mb-8 ml-8">
+							<p className="text-sm sm:text-lg mb-8 sm:ml-8">
 								{t("context.qbox.content.8")}
 								<br />
 								{t("context.qbox.content.9")}<TooltipProvider>
@@ -130,13 +130,13 @@ export default async function FiveMPage() {
 							<Separator className="my-2 w-[50%]" />
 							<ol className="list-decimal pl-5 space-y-4">
 								<li id="footnote-1" className="text-md mb-4">
-									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">{t('context.footnotes.0.0')}</a>{t('context.footnotes.0.1')}
-								</li>
-								<li id="footnote-2" className="text-md mb-4">
 									{t("context.qbox.content.0.2")}
 								</li>
-								<li id="footnote-3" className="text-md mb-4">
+								<li id="footnote-2" className="text-md mb-4">
 									{t("context.qbox.content.1.2")}
+								</li>
+								<li id="footnote-3" className="text-md mb-4">
+									<a href="https://fivem.team/" target="_blank" rel="noopener noreferrer" className="link">{t('context.footnotes.0.0')}</a>{t('context.footnotes.0.1')}
 								</li>
 							</ol>
 						</AccordionContent>
@@ -147,7 +147,7 @@ export default async function FiveMPage() {
 				<h2 className="text-2xl font-semibold my-4">
 					{t("projects.title")}
 				</h2>
-				<p className="text-lg mb-8 ml-8">
+				<p className="text-sm sm:text-lg mb-8 sm:ml-8">
 					{t("projects.description")}
 				</p>
 
@@ -168,8 +168,8 @@ export default async function FiveMPage() {
 						</div>
 						<div className="md:w-1/2 space-y-4 text-md">
 							<h2 className="text-2xl font-semibold">{project.title}</h2>
-							<p className="ml-8">{project.description}</p>
-							<ul className="ml-8 list-disc pl-5 space-y-2">
+							<p className="sm:ml-4">{project.description}</p>
+							<ul className="sm:ml-8 list-disc pl-5 space-y-2">
 								{project?.features?.map((feature, featureIndex) => (
 									<li key={featureIndex}>{feature}</li>
 								))}

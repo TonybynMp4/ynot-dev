@@ -15,10 +15,13 @@ export default function Home() {
 	const t = useTranslations("home")
 
 	return (
-		<main className="min-h-[80vh] mx-auto max-w-[80%] flex flex-col items-center justify-center gap-16">
-			<section className="text-center">
-				<h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
-				<p className="text-xl mb-8 max-w-2xl">
+		<main className="min-h-[80vh] mx-auto py-16 flex flex-col items-center justify-center gap-16 bg-gradient-to-br to-60% from-[#EF935A] to-[#15162c] ">
+			<section className="text-center mx-4 lg:mx-0 text-white">
+				<h1 className="font-bold mb-4" id="Ynot">
+					Ynot
+				</h1>
+				<h2 className="text-2xl font-bold mb-4">{t("title")}</h2>
+				<p className="text-sm sm:text-lg mb-8 max-w-2xl">
 					{t("subtitle.text.0")}
 					(
 					<TooltipProvider>
@@ -40,7 +43,7 @@ export default function Home() {
 				</Button>
 			</section>
 
-			<section className="w-full max-w-4xl bg-background/80 rounded-xl p-8">
+			<section className="max-w-3xl bg-background/80 rounded-xl p-2 lg:p-4 mx-4 lg:mx-0">
 				<h2 className="text-2xl font-semibold mb-4">{t("cards.title")}</h2>
 				<div className="flex flex-col space-y-8 md:flex-row md:space-x-8 md:space-y-0">
 					{

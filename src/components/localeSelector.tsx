@@ -12,7 +12,7 @@ export function LocaleSelector() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="icon">
+				<Button variant="outline" size="icon" className="hover:border-primary">
 					<GlobeIcon className="h-[1.2rem] w-[1.2rem]" />
 					<span className="sr-only">{t('sr_toggle')}</span>
 				</Button>
