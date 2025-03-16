@@ -8,8 +8,11 @@ import { ThemeProvider } from "@/components/themeProvider"
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 export const metadata: Metadata = {
-	title: "Ynot",
-	description: "A personal portfolio website",
+	title: {
+		default: "Ynot",
+		template: "Ynot | %s"
+	},
+	description: "Ynot's portfolio",
 };
 
 export default async function RootLayout({
@@ -22,6 +25,9 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale}>
+			<head>
+				<meta name="google-site-verification" content="v7ACOTonya3IyLeyDbTJERuNPGL98r4f4l6vozdSa3g" />
+			</head>
 			<body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<NextIntlClientProvider messages={messages}>
