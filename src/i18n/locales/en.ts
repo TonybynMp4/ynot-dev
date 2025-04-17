@@ -55,9 +55,44 @@ export default {
 				solo: "Solo",
 				group: "Group"
 			},
-			readMore: "Read More"
+			readMore: "See in action"
 		},
 		projects: [
+			{
+				title: "Les Dunes",
+				description: "Restaurant Website",
+				date: "March 2024",
+				duration: "5 hours",
+				role: "Front-end Developer",
+			},
+			{
+				title: "PixelParts",
+				description: "PC Parts E-commerce Website",
+				date: "October 2024",
+				duration: "40 hours",
+				role: "Full-stack Developer",
+			},
+			{
+				title: "Java RPG Game",
+				description: "Text-based RPG Game",
+				date: "September 2024",
+				duration: "10 hours",
+				role: "Developer",
+			},
+			{
+				title: "EfreiNews",
+				description: "School News Blog",
+				date: "October 2024",
+				duration: "15 hours",
+				role: "Full-stack Developer",
+			},
+			{
+				title: "VaultPay",
+				description: "Online Banking Website",
+				date: "January 2025",
+				duration: "1 week",
+				role: "Team Leader, Full-stack Developer, Designer",
+			},
 			{
 				title: "Portfolio",
 				description: "Well, this website!",
@@ -73,39 +108,11 @@ export default {
 				role: "Team Leader, Full-stack Developer",
 			},
 			{
-				title: "VaultPay",
-				description: "Online Banking Website",
-				date: "January 2025",
-				duration: "1 week",
-				role: "Team Leader, Full-stack Developer, Designer",
-			},
-			{
-				title: "EfreiNews",
-				description: "School News Blog",
-				date: "October 2024",
-				duration: "15 hours",
-				role: "Full-stack Developer",
-			},
-			{
-				title: "Java RPG Game",
-				description: "Text-based RPG Game",
-				date: "September 2024",
-				duration: "10 hours",
-				role: "Developer",
-			},
-			{
-				title: "PixelParts",
-				description: "PC Parts E-commerce Website",
-				date: "October 2024",
-				duration: "40 hours",
-				role: "Full-stack Developer",
-			},
-			{
-				title: "Les Dunes",
-				description: "Restaurant Website",
-				date: "March 2024",
-				duration: "5 hours",
-				role: "Front-end Developer",
+				title: "YFlop",
+				description: "X.com clone",
+				date: "April 2025",
+				duration: "2 days",
+				role: "Team Leader, Full-stack Developer",
 			},
 		]
 	},

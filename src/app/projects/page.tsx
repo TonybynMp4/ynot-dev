@@ -14,7 +14,7 @@ type Project = {
 	teamSize: number,
 	role: string,
 	github: string,
-	postId?: number
+	url?: string,
 }
 
 export default async function PortfolioPage() {
@@ -22,31 +22,43 @@ export default async function PortfolioPage() {
 
 	const projects: Project[] = [
 		{
-			title: t('projects.1.title'),
-			description: t('projects.1.description'),
-			date: t('projects.1.date'),
-			duration: t('projects.1.duration'),
-			role: t('projects.1.role'),
+			title: t('projects.7.title'),
+			description: t('projects.7.description'),
+			date: t('projects.7.date'),
+			duration: t('projects.7.duration'),
+			role: t('projects.7.role'),
 			tech: ["Express.js", "Vue", "TypeScript", "Netlify", "MySQL"],
 			teamSize: 4,
-			github: "https://github.com/TonybynMp4/InstaFlop"
+			github: "https://github.com/TonybynMp4/yflop"
 		},
 		{
-			title: t('projects.0.title'),
-			description: t('projects.0.description'),
-			date: t('projects.0.date'),
-			duration: t('projects.0.duration'),
-			role: t('projects.0.role'),
+			title: t('projects.6.title'),
+			description: t('projects.6.description'),
+			date: t('projects.6.date'),
+			duration: t('projects.6.duration'),
+			role: t('projects.6.role'),
+			tech: ["Express.js", "Vue", "TypeScript", "Netlify", "MySQL"],
+			teamSize: 4,
+			github: "https://github.com/TonybynMp4/InstaFlop",
+			url: "https://instaflop.y-not.dev/"
+		},
+		{
+			title: t('projects.5.title'),
+			description: t('projects.5.description'),
+			date: t('projects.5.date'),
+			duration: t('projects.5.duration'),
+			role: t('projects.5.role'),
 			tech: ["Next.js", "React", "Tailwind CSS", "Netlify", "TypeScript"],
 			teamSize: 1,
-			github: "https://github.com/TonybynMp4/ynot-dev"
+			github: "https://github.com/TonybynMp4/ynot-dev",
+			url: "https://ynot.dev/"
 		},
 		{
-			title: t('projects.2.title'),
-			description: t('projects.2.description'),
-			date: t('projects.2.date'),
-			duration: t('projects.2.duration'),
-			role: t('projects.2.role'),
+			title: t('projects.4.title'),
+			description: t('projects.4.description'),
+			date: t('projects.4.date'),
+			duration: t('projects.4.duration'),
+			role: t('projects.4.role'),
 			tech: ["PHP", "Symfony"],
 			teamSize: 4,
 			github: "https://github.com/TonybynMp4/VaultPay"
@@ -62,31 +74,31 @@ export default async function PortfolioPage() {
 			github: "https://github.com/TonybynMp4/EfreiNews"
 		},
 		{
-			title: t('projects.4.title'),
-			description: t('projects.4.description'),
-			date: t('projects.4.date'),
-			duration: t('projects.4.duration'),
-			role: t('projects.4.role'),
+			title: t('projects.2.title'),
+			description: t('projects.2.description'),
+			date: t('projects.2.date'),
+			duration: t('projects.2.duration'),
+			role: t('projects.2.role'),
 			tech: ["Java"],
 			teamSize: 1,
 			github: "https://github.com/TonybynMp4/Java-RPG-Game"
 		},
 		{
-			title: t('projects.5.title'),
-			description: t('projects.5.description'),
-			date: t('projects.5.date'),
-			duration: t('projects.5.duration'),
-			role: t('projects.5.role'),
+			title: t('projects.1.title'),
+			description: t('projects.1.description'),
+			date: t('projects.1.date'),
+			duration: t('projects.1.duration'),
+			role: t('projects.1.role'),
 			tech: ["PHP", "Mysql", "JavaScript", "HTML", "CSS"],
 			teamSize: 1,
 			github: "https://github.com/TonybynMp4/PixelParts"
 		},
 		{
-			title: t('projects.6.title'),
-			description: t('projects.6.description'),
-			date: t('projects.6.date'),
-			duration: t('projects.6.duration'),
-			role: t('projects.6.role'),
+			title: t('projects.0.title'),
+			description: t('projects.0.description'),
+			date: t('projects.0.date'),
+			duration: t('projects.0.duration'),
+			role: t('projects.0.role'),
 			tech: ["HTML", "CSS"],
 			teamSize: 3,
 			github: "https://github.com/TonybynMp4/LesDunes"
@@ -137,9 +149,11 @@ export default async function PortfolioPage() {
 									GitHub
 								</Link>
 							</Button>
-							{project.postId && (
+							{project.url && (
 								<Button variant="secondary" size="sm" asChild>
-									<Link href={`/blog/${project.postId}`}>View Case Study</Link>
+									<Link href={project.url} target="_blank" rel="noopener noreferrer">
+										{t("projectInfo.readMore")}
+									</Link>
 								</Button>
 							)}
 						</CardFooter>

@@ -55,9 +55,44 @@ export default {
 					solo: "Solo",
 					group: "Groupe"
 				},
-				readMore: "En savoir plus"
+				readMore: "Voir en action"
 			},
 		projects: [
+			{
+				title: "Les Dunes",
+				description: "Site vitrine pour un restaurant",
+				date: "Mars 2024",
+				duration: "5 heures",
+				role: "Développeur front-end"
+			},
+			{
+				title: "PixelParts",
+				description: "Site e-commerce de composants informatiques",
+				date: "Octobre 2024",
+				duration: "40 heures",
+				role: "Développeur full-stack",
+			},
+			{
+				title: "Java RPG Game",
+				description: "Jeu de rôle textuel en Java",
+				date: "Mai 2024",
+				duration: "10 heures",
+				role: "Développeur",
+			},
+			{
+				title: "EfreiNews",
+				description: "Blog d'actualités de l'école",
+				date: "Decembre 2024",
+				duration: "15 heures",
+				role: "Développeur full-stack",
+			},
+			{
+				title: "VaultPay",
+				description: "Banque en ligne fictive",
+				date: "Janvier 2025",
+				duration: "1 semaine",
+				role: "Chef de projet, Développeur full-stack, Designer",
+			},
 			{
 				title: "Portfolio",
 				description: "Bah.. ce site en fait!",
@@ -73,40 +108,12 @@ export default {
 				role: "Chef de projet, Développeur full-stack",
 			},
 			{
-				title: "VaultPay",
-				description: "Banque en ligne fictive",
-				date: "Janvier 2025",
-				duration: "1 semaine",
-				role: "Chef de projet, Développeur full-stack, Designer",
+				title: "YFlop",
+				description: "clone de X.com",
+				date: "Avril 2025",
+				duration: "2 jours",
+				role: "Chef de projet, Développeur full-stack",
 			},
-			{
-				title: "EfreiNews",
-				description: "Blog d'actualités de l'école",
-				date: "Decembre 2024",
-				duration: "15 heures",
-				role: "Développeur full-stack",
-			},
-			{
-				title: "Java RPG Game",
-				description: "Jeu de rôle textuel en Java",
-				date: "Mai 2024",
-				duration: "10 heures",
-				role: "Développeur",
-			},
-			{
-				title: "PixelParts",
-				description: "Site e-commerce de composants informatiques",
-				date: "Octobre 2024",
-				duration: "40 heures",
-				role: "Développeur full-stack",
-			},
-			{
-				title: "Les Dunes",
-				description: "Site vitrine pour un restaurant",
-				date: "Mars 2024",
-				duration: "5 heures",
-				role: "Développeur front-end"
-			}
 		]
 	},
 	fivem: {
