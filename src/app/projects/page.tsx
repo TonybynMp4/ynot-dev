@@ -51,7 +51,7 @@ export default async function PortfolioPage() {
 			tech: ["Next.js", "React", "Tailwind CSS", "Netlify", "TypeScript"],
 			teamSize: 1,
 			github: "https://github.com/TonybynMp4/ynot-dev",
-			url: "https://ynot.dev/"
+			url: "https://y-not.dev/"
 		},
 		{
 			title: t('projects.4.title'),
