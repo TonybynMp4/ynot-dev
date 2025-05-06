@@ -15,7 +15,6 @@ export default function HeaderLink({
 }) {
 	const pathname = usePathname();
 	const t = useTranslations("header.nav");
-
 	const isActive = pathname === path;
 
 	return (

@@ -1,9 +1,7 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import Link from "next/link"
 
 const cards = [
@@ -11,8 +9,8 @@ const cards = [
 	{scope: 'fivem', href: '/fivem'}
 ] as const
 
-export default function Home() {
-	const t = useTranslations("home")
+export default async function Home() {
+	const t = await getTranslations("home")
 
 	return (
 		<main className="min-h-[80vh] mx-auto py-16 flex flex-col items-center justify-center gap-16 bg-gradient-to-br to-60% from-[#EF935A] to-[#15162c] ">

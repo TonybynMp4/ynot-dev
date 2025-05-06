@@ -1,8 +1,7 @@
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
-import {NextIntlClientProvider} from 'next-intl';
-import {getLocale, getMessages} from 'next-intl/server';
+import {getLocale} from 'next-intl/server';
 
 import { ThemeProvider } from "@/components/themeProvider"
 import { Footer } from "@/components/footer";
@@ -24,7 +23,6 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const locale = await getLocale();
-	const messages = await getMessages();
 
 	return (
 		<html lang={locale}>
@@ -33,11 +31,9 @@ export default async function RootLayout({
 			</head>
 			<body>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<NextIntlClientProvider messages={messages}>
-						<Header />
-						{children}
-						<Footer />
-					</NextIntlClientProvider>
+					<Header />
+					{children}
+					<Footer />
 				</ThemeProvider>
 			</body>
 		</html>
