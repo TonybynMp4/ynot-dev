@@ -1,20 +1,16 @@
+import { hasLocale } from 'next-intl';
 import { getRequestConfig } from 'next-intl/server';
-import { getUserLocale } from './localeService';
-import { defaultLocale, type Locale, locales } from './config';
-import fr from './locales/fr';
-import en from './locales/en';
+import localeLibs from './locales/index';
+import { routing } from './routing';
 
-export default getRequestConfig(async () => {
-	const userLocale = (await getUserLocale());
-
-	const locale = locales.includes(userLocale as Locale) ? userLocale : defaultLocale;
-	const messages = {
-		fr,
-		en
-	}[locale] ?? {};
+export default getRequestConfig(async ({requestLocale}) => {
+	const requested = await requestLocale;
+	const locale = hasLocale(routing.locales, requested)
+		? requested
+		: routing.defaultLocale;
 
 	return {
 		locale,
-		messages
+		messages: localeLibs[locale] || localeLibs[routing.defaultLocale],
 	};
 });

@@ -1,28 +1,33 @@
 "use client"
-import { GlobeIcon } from "lucide-react"
+import { GlobeIcon } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useTranslations } from "next-intl"
-import { setUserLocale } from "@/i18n/localeService"
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { localeLabels, locales } from "@/i18n/config";
+import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export function LocaleSelector() {
 	const t = useTranslations("header.locale")
+	const router = useRouter();
+	const pathname = usePathname();
 
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
 				<Button variant="outline" size="icon" className="hover:border-primary">
-					<GlobeIcon className="h-[1.2rem] w-[1.2rem]" />
+					<GlobeIcon className="size-[1.2rem]" />
 					<span className="sr-only">{t('sr_toggle')}</span>
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
-				<DropdownMenuItem onClick={() => setUserLocale('en')}>English</DropdownMenuItem>
-				<DropdownMenuSeparator />
-				<DropdownMenuItem onClick={() => setUserLocale('fr')}>Français</DropdownMenuItem>
+				{locales.map((locale) => (
+					<DropdownMenuItem key={locale} onClick={() => router.replace(pathname, {locale})}>
+						{localeLabels[locale] || locale}
+					</DropdownMenuItem>
+				))}
 			</DropdownMenuContent>
 		</DropdownMenu>
 	)
 }
-

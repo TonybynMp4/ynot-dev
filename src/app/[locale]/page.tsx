@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { getTranslations } from "next-intl/server"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 const cards = [
 	{scope: 'portfolio', href: '/projects'},
@@ -21,8 +21,7 @@ export default async function Home() {
 				<h2 className="text-2xl font-bold mb-4">{t("title")}</h2>
 				<p className="text-sm sm:text-lg mb-8 max-w-2xl">
 					{t("subtitle.text.0")}
-					(
-					<TooltipProvider>
+					(<TooltipProvider>
 						<Tooltip>
 							<TooltipTrigger>
 								<Link href="/fivem" className="underline italic text-primary/80">{t("subtitle.text.1")}</Link>
@@ -31,8 +30,7 @@ export default async function Home() {
 								{t("subtitle.tooltip")}
 							</TooltipContent>
 						</Tooltip>
-					</TooltipProvider>
-					) {t("subtitle.text.2")}
+					</TooltipProvider>) {t("subtitle.text.2")}
 					<br />
 					&ldquo;{t("subtitle.text.3")}&rdquo;
 				</p>
