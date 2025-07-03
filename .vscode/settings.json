@@ -1,0 +1,16 @@
+{
+	"typescript.preferences.autoImportSpecifierExcludeRegexes": [
+		"@radix-ui",
+		"radix-ui",
+		"next/router",
+		"next/dist",
+		"react-day-picker",
+		"^lucide-react/dist/lucide-react.suffixed$",
+		"react-email"
+	],
+	"editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.removeUnusedImports": "explicit"
+    },
+	"typescript.tsdk": "node_modules\\typescript\\lib"
+}
