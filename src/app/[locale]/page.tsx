@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 
 const cards = [
 	{scope: 'portfolio', href: '/projects'},

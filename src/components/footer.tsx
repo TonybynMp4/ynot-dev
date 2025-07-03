@@ -1,6 +1,6 @@
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
-import { getTranslations } from "next-intl/server"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 export async function Footer() {
 	const t = await getTranslations("footer")

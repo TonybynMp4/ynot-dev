@@ -18,7 +18,7 @@ export default function NotFound() {
 				</div>
 				<Button asChild variant="outline" className="mt-4">
 					<Link href="/" className="flex items-center gap-2">
-						<ArrowLeftIcon /> Retour à l'accueil
+						<ArrowLeftIcon /> Retour à l&apos;accueil
 					</Link>
 				</Button>
 			</section>

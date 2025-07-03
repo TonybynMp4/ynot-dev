@@ -4,9 +4,8 @@ import { GlobeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { localeLabels, locales } from "@/i18n/config";
-import { useRouter } from "@/i18n/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 
 export function LocaleSelector() {
 	const t = useTranslations("header.locale")

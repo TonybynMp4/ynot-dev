@@ -1,9 +1,9 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { CalendarIcon, ClockIcon, GithubIcon, UserCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "@/i18n/navigation";
+import { CalendarIcon, ClockIcon, GithubIcon, UserCircleIcon } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 type Project = {
 	title: string,
@@ -132,7 +132,7 @@ export default async function PortfolioPage() {
 								<span><ClockIcon /></span>{project.duration}
 							</div>
 							<div className="flex items-center gap-2 text-sm">
-								<span><UserCircle /></span>{project.role}
+								<span><UserCircleIcon /></span>{project.role}
 							</div>
 							<div className="flex flex-wrap gap-2">
 								{project.tech.map((tech, techIndex) => (

@@ -1,8 +1,7 @@
 "use client"
 
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Link from "next/link"
-import { usePathname } from "next/navigation";
 
 export default function HeaderLink({
 	children,
