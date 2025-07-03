@@ -23,7 +23,7 @@ export default {
 		subtitle: {
 			text: [
 				"Je suis un étudiant en Développement full-stack et ",
-				"du moins autrefois",
+				"autrefois",
 				" Développeur FiveM.",
 				"I build stuff.. I guess."
 			],
@@ -48,15 +48,15 @@ export default {
 		title: "Mes projets Web",
 		description: "Projets scolaires, projets personnels.. Mais surtout des projets scolaires..",
 		projectInfo: {
-				date: "Date",
-				duration: "Durée",
-				role: "Mon rôle",
-				teamSizes: {
-					solo: "Solo",
-					group: "Groupe"
-				},
-				readMore: "Voir en action"
+			date: "Date",
+			duration: "Durée",
+			role: "Mon rôle",
+			teamSizes: {
+				solo: "Solo",
+				group: "Groupe"
 			},
+			readMore: "Voir en action"
+		},
 		projects: [
 			{
 				title: "Les Dunes",
@@ -137,13 +137,13 @@ export default {
 					[
 						"Après avoir été dans la communauté de ",
 						"qbcore",
-							"Predecesseur de Qbox. En bref: le \"manager\" est une mauvaise personne et les développeurs ont fini par quitter le projet.",
+						"Predecesseur de Qbox. En bref: le \"manager\" est une mauvaise personne et les développeurs ont fini par quitter le projet.",
 						" pendant quelques mois, le projet qbox a été créé par quelques membres de l'équipe qbcore.",
 					],
 					[
 						"J'ai rejoint la communauté Qbox relativement tôt, environ deux mois après son ",
 						"fork",
-							"Fork: copie d'un projet pour le modifier sans affecter l'original (et plus ou moins se \"l'approprier\")",
+						"Fork: copie d'un projet pour le modifier sans affecter l'original (et plus ou moins se \"l'approprier\")",
 						" de qbcore, et j'ai activement contribué au framework et à ses scripts jusqu'en mai 2024.",
 					],
 					"Au bout d'un moment, j'ai pu \"rejoindre\" l'équipe et aider au développement du framework plus directement, ce qui a été une super expérience.",
@@ -171,4 +171,4 @@ export default {
 			cta: "En savoir plus",
 		}
 	},
-  } as const
+};

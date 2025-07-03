@@ -1,18 +1,16 @@
-"use client"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { useTranslations } from "next-intl"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 
 const cards = [
 	{scope: 'portfolio', href: '/projects'},
 	{scope: 'fivem', href: '/fivem'}
 ] as const
 
-export default function Home() {
-	const t = useTranslations("home")
+export default async function Home() {
+	const t = await getTranslations("home")
 
 	return (
 		<main className="min-h-[80vh] mx-auto py-16 flex flex-col items-center justify-center gap-16 bg-gradient-to-br to-60% from-[#EF935A] to-[#15162c] ">
@@ -23,8 +21,7 @@ export default function Home() {
 				<h2 className="text-2xl font-bold mb-4">{t("title")}</h2>
 				<p className="text-sm sm:text-lg mb-8 max-w-2xl">
 					{t("subtitle.text.0")}
-					(
-					<TooltipProvider>
+					(<TooltipProvider>
 						<Tooltip>
 							<TooltipTrigger>
 								<Link href="/fivem" className="underline italic text-primary/80">{t("subtitle.text.1")}</Link>
@@ -33,8 +30,7 @@ export default function Home() {
 								{t("subtitle.tooltip")}
 							</TooltipContent>
 						</Tooltip>
-					</TooltipProvider>
-					) {t("subtitle.text.2")}
+					</TooltipProvider>) {t("subtitle.text.2")}
 					<br />
 					&ldquo;{t("subtitle.text.3")}&rdquo;
 				</p>
