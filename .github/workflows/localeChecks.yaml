@@ -1,0 +1,22 @@
+name: Locale Checks
+
+on:
+  push:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  locale-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: JSONify Locales
+        run: npm run locales:JSONify
+
+      - name: Check Locales
+        run: npm run locales:check
