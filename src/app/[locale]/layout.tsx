@@ -14,6 +14,9 @@ export const metadata: Metadata = {
 		default: "Ynot",
 		template: "Ynot | %s"
 	},
+	icon: {
+		icon: "/favicon.ico",
+	},
 	category: "portfolio",
     keywords: [
 		"Ynot", "Y-not", "dev", "portfolio", "projects", "web development", "software development", "developer", "full stack development", "frontend development", "backend development", "full stack", "frontend", "backend", "Développeur", "javascript", "typescript", "react", "next.js", "node.js", "express", "MySQL", "postgresql", "sql", "database", "api", "rest api", "css", "html", "tailwind",
