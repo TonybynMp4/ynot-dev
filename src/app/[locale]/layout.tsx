@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 		default: "Ynot",
 		template: "Ynot | %s"
 	},
-	icon: {
+	icons: {
 		icon: "/favicon.ico",
 	},
 	category: "portfolio",
