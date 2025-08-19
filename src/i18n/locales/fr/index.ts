@@ -122,7 +122,7 @@ export default {
 			intro: {
 				title: "Un peu de contexte",
 				content: [
-					"En fin 2021, Avant de commencer mon parcours en tant que développeur web, j'ai commencé par jouer avec le développement sur ",
+					"En fin 2021, Avant de commencer mon parcours en tant que développeur web, j'ai commencé avec le développement sur ",
 					"FiveM",
 					".",
 					"À ce moment-là, j'avais joué sur un serveur pendant presque un an et était devenu intéressé a la partie développement, alors j'ai commencé à apprendre!",
