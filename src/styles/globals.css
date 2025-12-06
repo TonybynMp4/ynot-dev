@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 
 @layer base {
 	:root {
@@ -78,12 +75,9 @@
 
 
 @layer base {
-	* {
-		@apply border-border outline-ring/50;
-	}
-
 	body {
-		@apply bg-background text-foreground;
+		background-color: rgb(var(--background));
+		color: rgb(var(--foreground));
 	}
 }
 
@@ -93,7 +87,10 @@ body {
 
 .link {
 	color: #0866ff;
-	@apply underline hover:text-[#0866ff]/80;
+	text-decoration: underline;
+	:hover {
+		color: #0866ff80;
+	}
 }
 
 
@@ -138,16 +135,5 @@ body {
 
 	100% {
 		transform: translateY(0);
-	}
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border;
-	}
-  body {
-    @apply bg-background text-foreground;
 	}
 }
