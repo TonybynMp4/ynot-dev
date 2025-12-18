@@ -93,6 +93,10 @@ body {
 	}
 }
 
+a:hover {
+	cursor: url("../../public/hand.cur"), pointer;
+}
+
 
 #Ynot:not(:hover)::before {
 	content: 'Yno';
